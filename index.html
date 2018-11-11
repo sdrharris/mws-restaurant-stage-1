@@ -25,10 +25,10 @@
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
-        <select role="tablist" tabindex="2" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select role="tablist" tabindex="2" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="select neighborhood">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select tabindex="2" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select tabindex="2" id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="select cuisine">
           <option value="all">All Cuisines</option>
         </select>
       </div>
