@@ -280,3 +280,30 @@ nav h1 a {
   color: #666;
 }
 
+/* Media Queries */
+@media screen and (min-width: 600px) {
+  .filter-options select {
+    width: 40%;
+    max-width: 200px;
+  }
+
+  .filter-selects {
+    text-emphasis: left;
+  }
+
+  #restaurants-list li {
+    flex-basis: 35%;
+  }
+
+  #restaurant-container {
+    padding: 30px 50px 80px;
+  }
+
+  #reviews-container {
+    padding: 30px 50px 80px;
+  }
+
+  #reviews-container li {
+    width: 85%;
+  }
+}
