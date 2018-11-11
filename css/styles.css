@@ -107,7 +107,7 @@ nav h1 a {
 .filter-options {
   width: 100%;
   height: 100%;
-  background-color: #3397DB;
+  background-color: #202226;
   align-items: center;
   padding: 10px 0;
 }
@@ -198,7 +198,7 @@ nav h1 a {
   align-items: center;
 }
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
+  background: rgb(0, 0, 15) none repeat scroll 0 0;
   height: 87%;
   position: fixed;
   right: 0;
