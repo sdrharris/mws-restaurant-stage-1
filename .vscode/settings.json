@@ -3,6 +3,7 @@
     "vscode-janus-debug.uploadOnSave": [
         "main",
         "restaurant_info",
-        "sw_registration"
+        "sw_registration",
+        "sw"
     ]
 }
