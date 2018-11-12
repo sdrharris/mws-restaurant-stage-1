@@ -1,7 +1,11 @@
 //Registering the Service Worker
 if ("serviceWorker" in navigator) {
-    navigator.ServiceWorker.register("js/sw.js").catch(function(err) {
-      console.error(err);
+    navigator.ServiceWorker.register("/s.w.js")
+    .then(function() {
+      console.error('Registration worked!');
+    })
+    .catch(function() {
+        console.log('Registration failed!');
     });
-  };
+  }
   
