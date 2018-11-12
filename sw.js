@@ -8,6 +8,7 @@ self.addEventListener('install', function (e) {
     );
 });  
 
+const cacheName = "Restaurant_Reviews-v1";
 const cacheFiles =[
     '/',
     '/index.html',
@@ -16,6 +17,7 @@ const cacheFiles =[
     '/js/dbhelper.js',
     '/js/main.js',
     '/js/restaurant.js',
+    './js/sw_registration.js',
     '/data/restaurants.json',
     '/img/1.jpg',
     '/img/2.jpg',
