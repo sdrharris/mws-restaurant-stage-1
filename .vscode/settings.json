@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "C:\\Users\\robis\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe"
+    "python.pythonPath": "C:\\Users\\robis\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    "vscode-janus-debug.uploadOnSave": [
+        "main",
+        "restaurant_info"
+    ]
 }
