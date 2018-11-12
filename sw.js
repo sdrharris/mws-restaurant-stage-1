@@ -1,15 +1,5 @@
-console.log('Service Worker: Registered');
-
-self.addEventListener('install', function (e) {
-    e.waitUntil(
-        caches.open('v1').then(function(cache) {
-            return cache.addAll(cacheFiles);
-        })
-    );
-});  
-
-const cacheName = "Restaurant_Reviews-v1";
-const cacheFiles =[
+let cacheNamed = "restaurant-reviews";
+let cacheFiles = [
     '/',
     '/index.html',
     '/restaurant.html',
@@ -31,27 +21,36 @@ const cacheFiles =[
     '/img/10.jpg'
 ];
 
-self.addEventListener('fetch', function(e) {
-    e.respondWith(
-        caches.match(e.request).then(function(response) {
-            if (response) {
-                console.log('Found', e.request, ' in cache');
-                return response;
-            }
-            else {
-                console.log('Could not find ', e.request, ' in cache, FETCHING!');
-                return fetch(e.request)
-                .then(function(response) {
-                    const clonedResponse = response.clone();
-                    caches.open('v1').then(function(cache) {
-                        cache.put(e.request, clonedResponse);
-                    })
-                    return response;
-                })
-                .catch(function(err) {
-                    console.error(err);                    
-                });
-            }
+// Service worker installation
+self.addEventListener('install', function(cache) {
+    event.waitUntil(
+        caches.open(cacheNamed).then(function(cache) {
+            return cache.addAll(cacheFiles);
+        })
+    );
+});
+
+// Service worker activation
+self.addEventListener('activate', function(event) {
+   event.waitUntil(
+       caches.keys().then(function(cacheNames) {
+           return Promise.all(
+               cacheNames.filter(function(cacheName) {
+                   return cacheName.startsWith('restaurant-') &&
+                    cacheName != cacheNamed;
+               }).map(function(cacheName) {
+                   return caches.delete(cacheName);
+               })
+           );
+       })
+   );
+});
+
+// fetch offline view
+self.addEventListener('fetch', function(event) {
+    event.respondwith(
+        caches.match(event.request).then(function(response) {
+            return response || fetch(event.request);
         })
     );
 });
