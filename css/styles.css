@@ -98,6 +98,9 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
+section #map-container {
+  height: 300px;
+}
 #map {
   height: 400px;
   width: 100%;
@@ -198,12 +201,11 @@ nav h1 a {
   align-items: center;
 }
 .inside #map-container {
-  background: rgb(0, 0, 15) none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
+  background: rgb(14, 14, 230) none repeat scroll 0 0;
   right: 0;
   top: 80px;
-  width: 50%;
+  width: 100%;
+  height: 60vh;
 }
 .inside #map {
   background-color: #ccc;
