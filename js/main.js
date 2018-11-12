@@ -68,6 +68,15 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
   });
 }
 
+//Registering the Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.ServiceWorker
+  .register('/sw.js')
+  .catch(function(err) {
+    console.error(err);
+  });
+}
+
 /**
  * Initialize leaflet map, called from HTML.
  */
@@ -178,6 +187,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.tabIndex = '3';
   li.append(more)
 
   return li
@@ -201,11 +211,11 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
+    const marker = DBHelper.
+    mapMarkerForRestaurant(restaurant, self.map);
     google.maps.event.addListener(marker, 'click', () => {
       window.location.href = marker.url
     });
     self.markers.push(marker);
-  });
+  }):
 } */
-
