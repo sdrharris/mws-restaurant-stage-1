@@ -230,14 +230,15 @@ section #map-container {
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 15px 0 30px;
+  margin: 30px 5px;
   text-transform: uppercase;
   line-height: 1.1;
+  height: 30px;
 }
 #restaurant-img {
   width: 90%;
-  border-radius: 13px 0 13px 0;
 }
+
 #restaurant-address {
   font-size: 12pt;
   margin: 10px 0px;
@@ -257,11 +258,13 @@ section #map-container {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: calc(50% - 80px);
+  padding: 140px 20px 30px;
+  width: 50%;
 }
-#reviews-container {
-  padding: 30px 40px 80px;
+
+#restaurant-container {
+  display: flex;
+  flex-direction: column;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -277,7 +280,9 @@ section #map-container {
 #reviews-list li {
   background-color: #fff;
   border: 2px solid #f3f3f3;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
