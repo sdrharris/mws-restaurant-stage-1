@@ -18,7 +18,7 @@ ul, li {
 	color: #333;
 }
 a {
-	color: orange;
+	color: rgb(226, 67, 165);
 	text-decoration: none;
 }
 a:hover, a:focus {
@@ -171,7 +171,7 @@ section #map-container {
   min-width: 100%;
 }
 #restaurants-list li h1 {
-  color: #f18200;
+  color: rgb(226, 67, 165);
   font-family: Arial,sans-serif;
   font-size: 14pt;
   font-weight: 200;
@@ -185,7 +185,7 @@ section #map-container {
   font-size: 11pt;
 }
 #restaurants-list li a {
-  background-color: orange;
+  background-color: rgb(226, 67, 165);;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
@@ -225,7 +225,7 @@ section #map-container {
   width: 50%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: rgb(226, 67, 165);
   font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 200;
@@ -267,7 +267,7 @@ section #map-container {
   flex-direction: column;
 }
 #reviews-container h2 {
-  color: #f58500;
+  color: rgb(226, 67, 165);
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
