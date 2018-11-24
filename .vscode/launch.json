@@ -5,6 +5,7 @@
 	// https://github.com/otris/vscode-janus-debug/wiki/Launching-the-Debugger
 	"version": "1.0.25",
 	"configurations": [
+		
 		{
 			"name": "Launch Script on Server",
 			"request": "launch",
