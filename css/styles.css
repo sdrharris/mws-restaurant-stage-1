@@ -183,14 +183,14 @@ label {
 }
 #restaurants-list p {
   margin: 0;
-  font-size: 11pt;
+  font-size: 14pt;
 }
 #restaurants-list li a {
   background-color: rgb(226, 67, 165);;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
-  font-size: 10pt;
+  font-size: 14pt;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
   text-align: center;
