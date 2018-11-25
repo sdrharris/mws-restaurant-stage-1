@@ -14,8 +14,10 @@ body {
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #333;
+  font-size: 10pt;
+  font-weight: 300;
+  color: #333;
+  margin: 0.2em;
 }
 a {
 	color: rgb(226, 67, 165);
@@ -95,6 +97,7 @@ nav h1 a {
 #breadcrumb li a {
     color: #0275d8;
     text-decoration: none;
+    font-weight: 300;
 }
 
 /* Add a color on mouse-over */
@@ -360,7 +363,7 @@ label {
   }
 
   #restaurant-name {
-    text-align: center;
+    text-align: justify;
    }
 
   #restaurants-list li {
@@ -396,6 +399,10 @@ label {
   #reviews-container {
     width: 62%;
   }
+
+  #restaurant-name {
+    text-align: justify;
+   }
 
   .restaurant-image-card {
     box-sizing: border-box;
