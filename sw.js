@@ -22,7 +22,7 @@ let cacheFiles = [
 ];
 
 // Service worker installation
-self.addEventListener('install', function(cache) {
+self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(cacheNamed).then(function(cache) {
             return cache.addAll(cacheFiles);
@@ -48,9 +48,26 @@ self.addEventListener('activate', function(event) {
 
 // fetch offline view
 self.addEventListener('fetch', function(event) {
-    event.respondwith(
+    event.respondWith(
         caches.match(event.request).then(function(response) {
-            return response || fetch(event.request);
+            if (response) {
+                console.log('Found ', event.request, ' in cache');
+                return response;
+            }
+            else {
+                console.log('Could not find ', event.request, ' in cache, FETCHING!');
+                return fetch(event.request)
+                .then(function(response) {
+                    const clonedResponse = response=.clone();
+                    caches.open('cacheNamed').then(function(cache) {
+                        cache.put(event.request, clonedResponse);
+                    })
+                    return response;
+                })
+                .catch(function(err) {
+                    console.error(err);
+                })
+            }
         })
     );
 });
