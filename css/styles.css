@@ -3,7 +3,7 @@
 
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
+	font-size: 14pt;
 	color: #333;
 	line-height: 1.5;
 }
@@ -225,13 +225,15 @@ label {
 #restaurant-name {
   color: rgb(226, 67, 165);
   font-family: Arial,sans-serif;
-  font-size: 20pt;
+  font-size: 16pt;
   font-weight: 200;
   letter-spacing: 0;
   margin: 30px 5px;
   text-transform: uppercase;
+  text-align: justify;
   line-height: 1.1;
   height: 30px;
+  padding: 1em;
 }
 #restaurant-img {
   width: 90%;
