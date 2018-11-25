@@ -19,22 +19,26 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
-      <div id="map" role "application" aria-hidden-"true" aria-describedby="map-help"></div>
-      <div hidden id="map-help">Map showing the filtered restaurants</div>
+    <section id="map-container" aria-labeledby="map-aria-description" role="application">
+      <div id="map"></div>
     </section>
+
+    <label id="map-aria-description" class="map-aria-description">Mapbox map</label>
     <section>
       <div class="filter-options">
-        <select id="neighborhoods-select" aria-label="Select neighborhoods" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Cuisines</option>
-        </select>
-      </div>
-    </section>
-    <section class="container">
-      <div class="col">
         <h2>Filter Results</h2>
-        <ul id="restaurants-list"></ul>
+        <div class"filter-selects">
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-labeledby="neighborhoods-label">
+            <option value="all">All Neighborhoods</options>
+          </select>
+          <label id-"neighborhoods-label" class="filter-label">by neighborhoods</label>
+          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-labeledby="cuisines-label">
+            <option value="all">All Cuisines</option>
+          </select>
+          <labelid="cuisines-label" class="filter-label">by cuisines</label>
+        </div>
       </div>
+      <ul id="restaurants-list"></ul>
     </section>
   </main>
 
@@ -42,7 +46,7 @@
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/sw_registration.js"></script>
-  <script type="application/javascript" charset="utf-8" src="node_modules/idb/lib/idb.js"></script>
+  
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
 
 
